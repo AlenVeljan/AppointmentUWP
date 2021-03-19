@@ -1,0 +1,2 @@
+MainPackage=C:\Users\AlenV\source\repos\AppointmentUWP\AppointmentUWP\bin\ARM\Debug\AppointmentUWP_1.0.1.0_ARM_Debug.msix
+SymbolPackage=C:\Users\AlenV\source\repos\AppointmentUWP\AppointmentUWP\obj\ARM\Debug\Symbols\AppointmentUWP_1.0.1.0_ARM_Debug.appxsym

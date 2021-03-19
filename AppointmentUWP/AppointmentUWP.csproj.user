@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <UapAppxPackageBuildMode>SideloadOnly</UapAppxPackageBuildMode>
+    <AppxShowAllApps>False</AppxShowAllApps>
+    <AppxBuildConfigurationSelection>x86|x64|arm</AppxBuildConfigurationSelection>
+    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
+    <Source>C:\Users\AlenV\source\repos\AppointmentUWP\AppointmentUWP\Assets\medIcon.scale-100.jpg</Source>
+    <SmallTileSource>C:\Users\AlenV\source\repos\AppointmentUWP\AppointmentUWP\Assets\medIcon.scale-100.jpg</SmallTileSource>
+    <MediumTileSource>C:\Users\AlenV\source\repos\AppointmentUWP\AppointmentUWP\Assets\medIcon.scale-100.jpg</MediumTileSource>
+    <WideTileSource>C:\Users\AlenV\source\repos\AppointmentUWP\AppointmentUWP\Assets\medIcon.scale-100.jpg</WideTileSource>
+    <LargeTileSource>C:\Users\AlenV\source\repos\AppointmentUWP\AppointmentUWP\Assets\medIcon.scale-100.jpg</LargeTileSource>
+    <AppIconSource>C:\Users\AlenV\source\repos\AppointmentUWP\AppointmentUWP\Assets\medIcon.scale-100.jpg</AppIconSource>
+    <SplashScreenSource>C:\Users\AlenV\source\repos\AppointmentUWP\AppointmentUWP\Assets\medIcon.scale-100.jpg</SplashScreenSource>
+    <PackageLogoSource>C:\Users\AlenV\source\repos\AppointmentUWP\AppointmentUWP\Assets\medIcon.scale-100.jpg</PackageLogoSource>
+    <BadgeLogoSource>C:\Users\AlenV\source\repos\AppointmentUWP\AppointmentUWP\Assets\LargeTile.scale-100.png</BadgeLogoSource>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DeviceId>30f105c9-681e-420b-a277-7c086ead8a4e</DeviceId>
+    <UseEmulator>true</UseEmulator>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,62 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="AppointmentUWP.AddAppointment"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppointmentUWP"
+    xmlns:data="using:AppointmentUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.BottomAppBar>
+        <AppBar Background="Blue" Foreground="White">
+            <Grid>
+                <AppBarButton x:ConnectionId='2' Icon="Save" Label="Save" Foreground="Ivory"                       Margin="100,6,6,6"/>
+                <AppBarButton x:ConnectionId='3' Icon="Cancel" Label="Cancel" Foreground="Ivory"                         Margin="200,6,6,6" />
+                <AppBarButton x:ConnectionId='4' Icon="Home" Label="Home" Foreground="Ivory"                            Margin="6,6,6,6"/>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+    <ScrollViewer>
+        <Grid x:ConnectionId='5' x:Name="LayoutRoot">
+            <Grid.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="Assets/Medical1.jpg" Opacity="0.6"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Margin="0,12,0,6">
+                <TextBlock Text="Medical Patient" FontSize="30" Margin="12,0,0,0"/>
+                <TextBlock x:ConnectionId='12' x:Name="texPageTitle"                                   FontSize="77" HorizontalAlignment="Center"/>
+                <TextBlock x:ConnectionId='13' x:Name="texPageTitle1"                                  FontSize="77" HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <Grid x:ConnectionId='6' x:Name="ContentPanel" Grid.Row="1" Margin="10,0,0,10">
+                <Grid x:ConnectionId='8' x:Name="PatientDisplay">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <DatePicker x:ConnectionId='9' x:Name="datePicker" Header="Date" Grid.Row="1" Grid.Column="1" Date="{Binding date, Mode=OneWay}" 
+                          HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TimePicker x:ConnectionId='10' Grid.Row="2" Header="Time"  Grid.Column="1" x:Name="timePicker" SelectedTime="{Binding date, Mode=TwoWay}"  />
+                    <TextBox x:ConnectionId='11' Grid.Row="3" Grid.Column="1" Name="noteTextBox" Header="Note" TextWrapping="Wrap" MaxHeight="200" MaxWidth="1200" 
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"  InputScope="Text" Text="{Binding note}" AcceptsReturn="False" Margin="0,30,200,50" Grid.RowSpan="3" RenderTransformOrigin="0.504,1.09"/>
+                </Grid>
+            </Grid>
+            <ProgressRing x:ConnectionId='7' x:Name="progRing" Grid.Row="1" Width="60" Height="60"/>
+        </Grid>
+    </ScrollViewer>
+</Page>
+

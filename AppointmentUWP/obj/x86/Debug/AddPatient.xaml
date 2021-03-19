@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="AppointmentUWP.AddPatient"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppointmentUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.BottomAppBar>
+        <AppBar Background="Blue" Foreground="White">
+            <Grid>
+                <AppBarButton x:ConnectionId='2' Icon="Save" Label="Save" Foreground="Ivory"                         Margin="100,6,6,6"/>
+                <AppBarButton x:ConnectionId='3' Icon="Cancel" Label="Cancel" Foreground="Ivory"                          Margin="200,6,6,6" />
+                <AppBarButton x:ConnectionId='4' Icon="Home" Label="Home" Foreground="Ivory"                            Margin="6,6,6,6"/>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+
+    <ScrollViewer>
+        <Grid x:ConnectionId='5' x:Name="LayoutRoot">
+            <Grid.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="Assets/Medical1.jpg" Opacity="0.6"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Margin="0,12,0,6">
+                <TextBlock Text="Add Patient" FontSize="60" HorizontalAlignment="Center" />
+           </StackPanel>
+                <Grid Grid.Row="3">
+        <StackPanel>
+            <TextBox x:ConnectionId='6' x:Name="patientFirstNameTB" PlaceholderText="First Name" Margin="100,6,100,20"/>
+            <TextBox x:ConnectionId='7' x:Name="patientLastNameTB" PlaceholderText="Last Name" Margin="100,6,100,6"/>
+        </StackPanel>
+      </Grid>
+            
+        </Grid>
+   </ScrollViewer>
+</Page>
+

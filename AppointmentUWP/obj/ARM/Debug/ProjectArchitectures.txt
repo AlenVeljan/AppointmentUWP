@@ -1,0 +1,1 @@
+C:\Users\AlenV\source\repos\AppointmentUWP\AppointmentUWP\AppointmentUWP.csproj;arm
